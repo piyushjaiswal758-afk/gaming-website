@@ -1,1 +1,148 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0b0b0b;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/rdr2.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+.hero h1 {
+  font-size: 3rem;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  animation: neonGlow 1.5s infinite alternate;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+  color: #fff;
+  text-shadow: 0 0 5px #0ff;
+}
+.hero button {
+  padding: 12px 30px;
+  font-size: 1rem;
+  background: #0ff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #000;
+  transition: 0.3s;
+}
+.hero button:hover { background: #00cfcf; }
+
+@keyframes neonGlow {
+  0% { text-shadow: 0 0 5px #0ff, 0 0 10px #0ff; }
+  100% { text-shadow: 0 0 20px #0ff, 0 0 40px #0ff; }
+}
+
+/* Games Section */
+.games {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 20px;
+  perspective: 1500px;
+  flex-wrap: wrap;
+}
+.card {
+  background: #111;
+  width: 250px;
+  height: 350px;
+  border-radius: 15px;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.5s, box-shadow 0.3s;
+  cursor: pointer;
+  box-shadow: 0 0 10px #0ff;
+}
+.card img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.card h3 {
+  text-align: center;
+  margin: 10px 0;
+  color: #0ff;
+}
+.card:hover {
+  transform: rotateY(20deg) rotateX(10deg) scale(1.1);
+  box-shadow: 0 0 20px #0ff, 0 0 40px #0ff inset;
+}
+.card:hover img { transform: scale(1.05); }
+
+/* Trust Section */
+.trust {
+  background: #111;
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 2px solid #0ff;
+  border-bottom: 2px solid #0ff;
+}
+.trust h2 {
+  margin-bottom: 20px;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff;
+}
+.trust p { max-width: 700px; margin: auto; font-size: 1.1rem; color: #fff; }
+
+/* Contact Section */
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+.contact h2 {
+  margin-bottom: 30px;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: auto;
+}
+.contact input, .contact textarea {
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  background: #222;
+  color: #fff;
+  outline: none;
+}
+.contact input::placeholder, .contact textarea::placeholder { color: #aaa; }
+.contact button {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background: #0ff;
+  color: #000;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.contact button:hover { background: #00cfcf; }
+
+/* Scroll Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
